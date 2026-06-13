@@ -1,0 +1,172 @@
+# ═══════════════════════════════════════════════════════════════
+# 灵脑 Evaluation Configuration
+# ═══════════════════════════════════════════════════════════════
+# 遵循 OpenAI Evals 框架的 YAML 配置约定。
+# 由 EvalConfig.from_yaml() 加载，驱动 Eval 类的默认行为。
+#
+# 结构:
+#   defaults       — 全局默认参数
+#   match_types    — 每种 match type 的参数说明
+#   per_task_type  — 8 种任务各自的评测配置
+# ═══════════════════════════════════════════════════════════════
+
+# ─── 全局默认 ───────────────────────────────────────────────
+defaults:
+  metrics:
+    - accuracy
+    - bootstrap_std
+    - f1_score
+  pass_threshold: 0.88
+  bootstrap_samples: 1000
+  bootstrap_confidence: 0.95
+
+# ─── Match 类型说明 ──────────────────────────────────────────
+match_types:
+
+  weighted_field:
+    description: >
+      加权字段匹配 — 灵脑核心评测原语。
+      安全关键字段 (must_match) 权重 1.0，非关键字段 (optional) 权重 0.5。
+      公式: score = (S_must × W_must + S_opt × W_opt) / (N_must × W_must + N_opt × W_opt)
+    must_weight: 1.0
+    optional_weight: 0.5
+
+  json_includes:
+    description: >
+      JSON 包含匹配 — 对应 OpenAI Evals "Includes"。
+      期望输出的所有字段必须出现在预测中且值相等，但预测可有额外字段。
+
+  json_fuzzy:
+    description: >
+      JSON 模糊匹配 — 对应 OpenAI Evals "FuzzyMatch"。
+      字符串字段执行双向包含检查，其他字段精确匹配。
+      适用于自由文本字段允许措辞变体的场景。
+
+  exact:
+    description: >
+      精确匹配 — 对应 OpenAI Evals "Match"。
+      predicted == expected 完全等同，不允许任何差异。
+      最严格的匹配器。
+
+  model_graded:
+    description: >
+      LLM 做法官 — 对应 OpenAI Evals "ModelGraded"。
+      使用 Qwen3-VL 作为评判模型，对开放式输出评分。
+    model: qwen3-vl-8b
+    strategy: classify
+    choice_strings:
+      - 正确
+      - 部分正确
+      - 错误
+    choice_scores:
+      - 1.0
+      - 0.5
+      - 0.0
+    max_tokens: 256
+    temperature: 0.0
+    prompt_template: |
+      你是一个工业机器人指令理解评测专家。请判断模型输出的结构化指令是否与期望输出一致。
+
+      工人说的话：{worker_utterance}
+      当前世界状态：{world_state}
+      期望的 JSON 输出：{ideal}
+      模型实际输出的 JSON：{completion}
+
+      请选择以下评价之一：
+      - 正确：模型输出与期望完全一致，所有关键字段都正确
+      - 部分正确：主要操作正确，但部分细节字段有偏差
+      - 错误：操作类型错误或关键字段严重错误
+
+      只输出评价结果（正确/部分正确/错误），不需要输出其他内容。
+
+# ─── 按任务类型配置 ──────────────────────────────────────────
+# 每个任务的 must_match / optional 字段列表。
+# 默认使用 weighted_field 匹配器。
+per_task_type:
+
+  取料_放置:
+    match_type: weighted_field
+    description: 拾取并放置指定物体到目标容器
+    args:
+      must_match:
+        - action
+        - object_filter.color
+        - target.container
+      optional:
+        - object_filter
+        - source
+        - target
+        - force
+
+  装配:
+    match_type: weighted_field
+    description: 将零件装配到基座上
+    args:
+      must_match:
+        - action
+        - object_filter.type
+        - target.base
+      optional:
+        - object_filter
+        - target
+        - force
+        - params
+
+  换线:
+    match_type: weighted_field
+    description: 切换生产线和产品型号
+    args:
+      must_match:
+        - action
+        - line_id
+      optional:
+        - model
+
+  质检:
+    match_type: weighted_field
+    description: 检查零件缺陷
+    args:
+      must_match:
+        - action
+        - check_type
+        - expected_answer
+      optional:
+        - object
+
+  搬运:
+    match_type: weighted_field
+    description: 将物体从源位置搬运到目标位置
+    args:
+      must_match:
+        - action
+        - target_location
+      optional:
+        - object
+
+  异常应对:
+    match_type: weighted_field
+    description: 紧急停止或异常响应
+    args:
+      must_match:
+        - action
+        - urgency
+      optional:
+        - response_window_ms
+
+  状态查询:
+    match_type: weighted_field
+    description: 查询产线状态或产量
+    args:
+      must_match:
+        - action
+        - query
+      optional: []
+
+  协作等待:
+    match_type: weighted_field
+    description: 等待协作条件满足
+    args:
+      must_match:
+        - action
+        - resume_condition
+      optional: []

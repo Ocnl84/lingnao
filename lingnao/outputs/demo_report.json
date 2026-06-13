@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-11T13:50:03.269324",
+  "timestamp": "2026-06-13T18:05:26.553260",
   "mode": "gpu",
   "steps": {
     "data_gen": {
@@ -12,13 +12,12 @@
       "passed": false
     },
     "training": {
-      "status": "completed",
-      "lora_path": "/root/Brain/demo/lingnao/outputs/lora_out/final"
+      "status": "skipped"
     },
     "tuned": {
-      "avg_score": 0.9354,
+      "avg_score": 0.8049,
       "format_pass_rate": 1.0,
-      "passed": true
+      "passed": false
     }
   }
 }

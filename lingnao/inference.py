@@ -20,9 +20,12 @@ import torch
 from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
 from peft import PeftModel
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from config import MODEL_PATH, SYSTEM_PROMPT, TEST_FILE, OUTPUT_DIR
-from evaluator import safe_parse_json
+try:
+    from .config import MODEL_PATH, SYSTEM_PROMPT, TEST_FILE, OUTPUT_DIR
+    from .evaluator import safe_parse_json
+except ImportError:
+    from config import MODEL_PATH, SYSTEM_PROMPT, TEST_FILE, OUTPUT_DIR
+    from evaluator import safe_parse_json
 
 
 def load_model_with_lora(

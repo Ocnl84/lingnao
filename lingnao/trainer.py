@@ -30,16 +30,20 @@ from peft import (
     PeftModel,
 )
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from config import (
-    MODEL_PATH,
-    TRAIN_FILE,
-    OUTPUT_DIR,
-    SYSTEM_PROMPT,
-    LoRAConfig as LoRAConfigData,
-    TrainingConfig as TrainingConfigData,
-    VALID_ACTIONS,
-)
+try:
+    from .config import (
+        MODEL_PATH, TRAIN_FILE, OUTPUT_DIR, SYSTEM_PROMPT,
+        LoRAConfig as LoRAConfigData,
+        TrainingConfig as TrainingConfigData,
+        VALID_ACTIONS,
+    )
+except ImportError:
+    from config import (
+        MODEL_PATH, TRAIN_FILE, OUTPUT_DIR, SYSTEM_PROMPT,
+        LoRAConfig as LoRAConfigData,
+        TrainingConfig as TrainingConfigData,
+        VALID_ACTIONS,
+    )
 
 
 # ═══════════════════════════════════════════════════════════

@@ -23,8 +23,10 @@ import os
 import sys
 from typing import Dict, List, Optional, Set
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from config import TRAIN_FILE, TEST_FILE, VALID_ACTIONS
+try:
+    from .config import TRAIN_FILE, TEST_FILE, VALID_ACTIONS
+except ImportError:
+    from config import TRAIN_FILE, TEST_FILE, VALID_ACTIONS
 
 # ═══════════════════════════════════════════════════════════
 # 模板库

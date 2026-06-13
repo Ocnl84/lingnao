@@ -67,8 +67,18 @@ class BitsAndBytesConfig:
 
 
 # ─── 评测配置 ───────────────────────────────────────────
-# 达标线：100 条测试集平均分 ≥ 0.88
+# 达标线：100 条测试集平均分 ≥ 0.88（OpenAI Evals: accuracy ≥ threshold）
 PASS_THRESHOLD = 0.88
+
+# Eval YAML 配置文件路径
+EVAL_CONFIG_YAML = os.path.join(BASE_DIR, "eval_config.yaml")
+
+# Bootstrap 置信区间参数（OpenAI Evals 标准）
+BOOTSTRAP_SAMPLES = 1000
+BOOTSTRAP_CONFIDENCE = 0.95
+
+# F1 平均策略
+F1_AVERAGE = "macro"  # macro | micro | weighted
 
 # 8 种任务类型（与技术方案 Table 4 一致）
 VALID_ACTIONS = [

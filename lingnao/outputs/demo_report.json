@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-06-11T13:50:03.269324",
+  "mode": "gpu",
+  "steps": {
+    "data_gen": {
+      "train_count": 448,
+      "test_count": 104
+    },
+    "baseline": {
+      "avg_score": 0.8049,
+      "format_pass_rate": 1.0,
+      "passed": false
+    },
+    "training": {
+      "status": "completed",
+      "lora_path": "/root/Brain/demo/lingnao/outputs/lora_out/final"
+    },
+    "tuned": {
+      "avg_score": 0.9354,
+      "format_pass_rate": 1.0,
+      "passed": true
+    }
+  }
+}

@@ -1,8 +1,8 @@
 """灵脑评测模块单元测试"""
 import sys
 import os
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lingnao.evaluator import safe_parse_json, score_sample, get_nested
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from lingnao.eval import safe_parse_json, score_sample, get_nested
 
 # 测试 1: JSON 解析容错
 assert safe_parse_json('{"a": 1}') == {"a": 1}, "直接解析失败"

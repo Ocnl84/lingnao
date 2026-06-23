@@ -11,7 +11,7 @@
 import random
 from typing import Dict, List, Tuple, Any, Optional
 
-from .eval_types import SampleResult, flatten_fields
+from .types import SampleResult, flatten_fields
 
 
 # ═══════════════════════════════════════════════════════════

@@ -24,7 +24,14 @@ demo/
     ├── __init__.py              # 包说明
     ├── config.py                # 统一配置（路径/超参/提示词）
     ├── data_generator.py        # 训练数据生成器（8 种任务类型）
-    ├── evaluator.py             # 评测模块（字段级严格匹配）
+    ├── eval/                    # 评测模块（OpenAI Evals 框架）
+    │   ├── __init__.py           #   Eval 类 + 兼容包装器 + CLI
+    │   ├── types.py              #   类型定义
+    │   ├── matchers.py           #   匹配器实现
+    │   ├── metrics.py            #   指标计算
+    │   ├── model_graded.py       #   LLM-as-Judge
+    │   ├── config.yaml           #   评测配置
+    │   └── tests.py              #   单元测试
     ├── trainer.py               # QLoRA 微调脚本（技术方案第八节）
     ├── inference.py             # 推理脚本（加载 LoRA 推理）
     ├── data/                    # 数据集目录
@@ -79,7 +86,7 @@ demo/
 ### data_generator.py
 按技术方案第四节格式生成训练数据。每条样本包含 `worker_utterance`（工人原话）、`world_state`（场景对象）、`expected_output`（结构化 JSON 答案）、`eval_criteria`（评测规则）。
 
-### evaluator.py
+### eval/
 实现技术方案第七节的字段级严格匹配评测。支持 4 级 JSON 解析容错：直接 parse → 正则找 ```json``` 块 → 找 `{...}` 区间 → 失败返回 None。
 
 ### trainer.py

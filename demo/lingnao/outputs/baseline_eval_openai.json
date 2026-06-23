@@ -1,0 +1,4954 @@
+{
+  "config_id": "lingnao_baseline_v1",
+  "total": 104,
+  "metrics": {
+    "accuracy": 0.5769,
+    "bootstrap_mean": 0.8042,
+    "bootstrap_std": 0.0257,
+    "bootstrap_ci_lower": 0.7493,
+    "bootstrap_ci_upper": 0.8515,
+    "f1_score": 0.7904,
+    "avg_score": 0.804
+  },
+  "samples": [
+    {
+      "id": "test_取料_放置_001",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "银色",
+            "expected": "银色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_510",
+            "expected": "box_510",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "银色",
+              "type": "轴承"
+            },
+            "expected": {
+              "color": "银色"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_315",
+            "expected": "obj_315",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_510"
+            },
+            "expected": {
+              "container": "box_510"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "轻",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_002",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "黑色",
+            "expected": "黑色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_839",
+            "expected": "box_839",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "黑色",
+              "head": "内六角"
+            },
+            "expected": {
+              "color": "黑色",
+              "head": "内六角"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_682",
+            "expected": "obj_682",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_839"
+            },
+            "expected": {
+              "container": "box_839"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "重",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_003",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "金色",
+            "expected": "金色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_941",
+            "expected": "box_941",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "金色",
+              "type": "螺母"
+            },
+            "expected": {
+              "color": "金色"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_622",
+            "expected": "obj_622",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_941"
+            },
+            "expected": {
+              "container": "box_941"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "轻",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_004",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 2,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "绿色",
+            "expected": "绿色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_296",
+            "expected": "box_296",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "绿色",
+              "type": "电路板"
+            },
+            "expected": {
+              "color": "绿色"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "托盘",
+            "expected": "obj_706",
+            "correct": false,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_296"
+            },
+            "expected": {
+              "container": "box_296"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "轻",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_005",
+      "score": 0.7,
+      "passed": false,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "银色",
+            "expected": "银色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_190",
+            "expected": "box_190",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "银色",
+              "type": "螺母"
+            },
+            "expected": {
+              "color": "银色"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "托盘",
+            "expected": "obj_610",
+            "correct": false,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_190"
+            },
+            "expected": {
+              "container": "box_190"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "中",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_006",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 2,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "黑色",
+            "expected": "黑色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_798",
+            "expected": "box_798",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "黑色",
+              "type": "轴承"
+            },
+            "expected": {
+              "color": "黑色"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_456",
+            "expected": "obj_456",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_798"
+            },
+            "expected": {
+              "container": "box_798"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "重",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_007",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 2,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "金色",
+            "expected": "金色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_415",
+            "expected": "box_415",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "金色",
+              "type": "螺母"
+            },
+            "expected": {
+              "color": "金色"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_471",
+            "expected": "obj_471",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_415"
+            },
+            "expected": {
+              "container": "box_415"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "重",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_008",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 4,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "银色",
+            "expected": "银色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_590",
+            "expected": "box_590",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "银色",
+              "head": "十字"
+            },
+            "expected": {
+              "color": "银色",
+              "head": "十字"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_731",
+            "expected": "obj_731",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_590"
+            },
+            "expected": {
+              "container": "box_590"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "轻",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_009",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "黑色",
+            "expected": "黑色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_707",
+            "expected": "box_707",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "黑色"
+            },
+            "expected": {
+              "color": "黑色"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_206",
+            "expected": "obj_206",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_707"
+            },
+            "expected": {
+              "container": "box_707"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "重",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_010",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 2,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "金色",
+            "expected": "金色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_845",
+            "expected": "box_845",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "金色",
+              "type": "螺母"
+            },
+            "expected": {
+              "color": "金色"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_883",
+            "expected": "obj_883",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_845"
+            },
+            "expected": {
+              "container": "box_845"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "中",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_011",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "绿色",
+            "expected": "绿色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_320",
+            "expected": "box_320",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "绿色",
+              "type": "电路板"
+            },
+            "expected": {
+              "color": "绿色"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_904",
+            "expected": "obj_904",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_320"
+            },
+            "expected": {
+              "container": "box_320"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "轻",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_012",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "黑色",
+            "expected": "黑色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_806",
+            "expected": "box_806",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "黑色",
+              "head": "无"
+            },
+            "expected": {
+              "color": "黑色"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_686",
+            "expected": "obj_686",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_806"
+            },
+            "expected": {
+              "container": "box_806"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "轻",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_取料_放置_013",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "取料_放置",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 4,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "取料_放置",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.color": {
+            "predicted": "黑色",
+            "expected": "黑色",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.container": {
+            "predicted": "box_249",
+            "expected": "box_249",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "color": "黑色",
+              "head": "内六角"
+            },
+            "expected": {
+              "color": "黑色",
+              "head": "内六角"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "source": {
+            "predicted": "obj_699",
+            "expected": "obj_699",
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_249"
+            },
+            "expected": {
+              "container": "box_249"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "轻",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_001",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 2,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "齿轮",
+            "expected": "齿轮",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_225",
+            "expected": "box_225",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "齿轮"
+            },
+            "expected": {
+              "type": "齿轮"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_225"
+            },
+            "expected": {
+              "base": "box_225"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "中",
+            "correct": false,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": null,
+            "expected": {
+              "torque_nm": 0.8,
+              "depth_mm": 12
+            },
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_002",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 4,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "电路板",
+            "expected": "电路板",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_396",
+            "expected": "box_396",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "电路板"
+            },
+            "expected": {
+              "type": "电路板"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_396"
+            },
+            "expected": {
+              "base": "box_396"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "中",
+            "expected": "中",
+            "correct": true,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 1.2,
+              "depth_mm": 5
+            },
+            "expected": {
+              "torque_nm": 1.2,
+              "depth_mm": 5
+            },
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_003",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "齿轮",
+            "expected": "齿轮",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_916",
+            "expected": "box_916",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "齿轮"
+            },
+            "expected": {
+              "type": "齿轮"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_916"
+            },
+            "expected": {
+              "base": "box_916"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "中",
+            "expected": "中",
+            "correct": true,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 0,
+              "depth_mm": 0
+            },
+            "expected": {
+              "torque_nm": 1.0,
+              "depth_mm": 8
+            },
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_004",
+      "score": 0.3,
+      "passed": false,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "装配",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "螺母",
+            "expected": "螺母",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": null,
+            "expected": "box_320",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "螺母"
+            },
+            "expected": {
+              "type": "螺母"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "container": "box_320"
+            },
+            "expected": {
+              "base": "box_320"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "中",
+            "correct": false,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": null,
+            "expected": {
+              "torque_nm": 1.2,
+              "depth_mm": 15
+            },
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_005",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "齿轮",
+            "expected": "齿轮",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_397",
+            "expected": "box_397",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "齿轮"
+            },
+            "expected": {
+              "type": "齿轮"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_397"
+            },
+            "expected": {
+              "base": "box_397"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "中",
+            "correct": false,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 1.0,
+              "depth_mm": 12
+            },
+            "expected": {
+              "torque_nm": 1.0,
+              "depth_mm": 12
+            },
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_006",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "齿轮",
+            "expected": "齿轮",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_309",
+            "expected": "box_309",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "齿轮"
+            },
+            "expected": {
+              "type": "齿轮"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_309"
+            },
+            "expected": {
+              "base": "box_309"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "中",
+            "expected": "中",
+            "correct": true,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 5,
+              "depth_mm": 15
+            },
+            "expected": {
+              "torque_nm": 1.2,
+              "depth_mm": 15
+            },
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_007",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 2,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "螺丝",
+            "expected": "螺丝",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_804",
+            "expected": "box_804",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "螺丝",
+              "color": "黑色",
+              "head": "内六角"
+            },
+            "expected": {
+              "type": "螺丝"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_804"
+            },
+            "expected": {
+              "base": "box_804"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "中",
+            "expected": "中",
+            "correct": true,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 0.5,
+              "depth_mm": 8
+            },
+            "expected": {
+              "torque_nm": 1.0,
+              "depth_mm": 8
+            },
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_008",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "齿轮",
+            "expected": "齿轮",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_167",
+            "expected": "box_167",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "齿轮"
+            },
+            "expected": {
+              "type": "齿轮"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_167"
+            },
+            "expected": {
+              "base": "box_167"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "中",
+            "expected": "中",
+            "correct": true,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 0.8,
+              "depth_mm": 0
+            },
+            "expected": {
+              "torque_nm": 0.8,
+              "depth_mm": 5
+            },
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_009",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 4,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "齿轮",
+            "expected": "齿轮",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_842",
+            "expected": "box_842",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "齿轮"
+            },
+            "expected": {
+              "type": "齿轮"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_842"
+            },
+            "expected": {
+              "base": "box_842"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "中",
+            "expected": "中",
+            "correct": true,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 0.8,
+              "depth_mm": 8
+            },
+            "expected": {
+              "torque_nm": 0.8,
+              "depth_mm": 8
+            },
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_010",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 2,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "齿轮",
+            "expected": "齿轮",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_548",
+            "expected": "box_548",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "齿轮"
+            },
+            "expected": {
+              "type": "齿轮"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_548"
+            },
+            "expected": {
+              "base": "box_548"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "中",
+            "correct": false,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 0.8
+            },
+            "expected": {
+              "torque_nm": 0.8,
+              "depth_mm": 5
+            },
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_011",
+      "score": 0.9,
+      "passed": true,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 3,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "轴承",
+            "expected": "轴承",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_461",
+            "expected": "box_461",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "轴承"
+            },
+            "expected": {
+              "type": "轴承"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_461"
+            },
+            "expected": {
+              "base": "box_461"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "中",
+            "expected": "中",
+            "correct": true,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 5,
+              "depth_mm": 3
+            },
+            "expected": {
+              "torque_nm": 1.0,
+              "depth_mm": 8
+            },
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_012",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 2,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "螺丝",
+            "expected": "螺丝",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_187",
+            "expected": "box_187",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "螺丝",
+              "color": "红色",
+              "head": "一字"
+            },
+            "expected": {
+              "type": "螺丝"
+            },
+            "correct": false,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_187"
+            },
+            "expected": {
+              "base": "box_187"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "中",
+            "expected": "中",
+            "correct": true,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 1.2,
+              "depth_mm": 0
+            },
+            "expected": {
+              "torque_nm": 1.2,
+              "depth_mm": 15
+            },
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_装配_013",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "装配",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 2,
+        "n_opt": 4,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "装配",
+            "expected": "装配",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter.type": {
+            "predicted": "外壳",
+            "expected": "外壳",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target.base": {
+            "predicted": "box_669",
+            "expected": "box_669",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object_filter": {
+            "predicted": {
+              "type": "外壳"
+            },
+            "expected": {
+              "type": "外壳"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "target": {
+            "predicted": {
+              "base": "box_669"
+            },
+            "expected": {
+              "base": "box_669"
+            },
+            "correct": true,
+            "weight": 0.5
+          },
+          "force": {
+            "predicted": "轻",
+            "expected": "中",
+            "correct": false,
+            "weight": 0.5
+          },
+          "params": {
+            "predicted": {
+              "torque_nm": 0.5,
+              "depth_mm": 0
+            },
+            "expected": {
+              "torque_nm": 0.5,
+              "depth_mm": 5
+            },
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_001",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "4号线",
+            "expected": "4",
+            "correct": false,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "C-1000",
+            "expected": "C-1000",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_002",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "4号线",
+            "expected": "4",
+            "correct": false,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "A-200",
+            "expected": "A-200",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_003",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "4",
+            "expected": "4",
+            "correct": true,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "B-500",
+            "expected": "B-500",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_004",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "4号",
+            "expected": "4",
+            "correct": false,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "A-200",
+            "expected": "A-200",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_005",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "5号线",
+            "expected": "5",
+            "correct": false,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "C-1000",
+            "expected": "C-1000",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_006",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "4",
+            "expected": "4",
+            "correct": true,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "C-1000",
+            "expected": "C-1000",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_007",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "5",
+            "expected": "5",
+            "correct": true,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "B-500",
+            "expected": "B-500",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_008",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "4号线",
+            "expected": "4",
+            "correct": false,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "B-500",
+            "expected": "B-500",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_009",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "2号线",
+            "expected": "2",
+            "correct": false,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "B-500",
+            "expected": "B-500",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_010",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "2号",
+            "expected": "2",
+            "correct": false,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "B-500",
+            "expected": "B-500",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_011",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "3号线",
+            "expected": "3",
+            "correct": false,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "A-200",
+            "expected": "A-200",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_012",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "4",
+            "expected": "4",
+            "correct": true,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "B-500",
+            "expected": "B-500",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_换线_013",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "换线",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "换线",
+            "expected": "换线",
+            "correct": true,
+            "weight": 1.0
+          },
+          "line_id": {
+            "predicted": "2号",
+            "expected": "2",
+            "correct": false,
+            "weight": 1.0
+          },
+          "model": {
+            "predicted": "B-500",
+            "expected": "B-500",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_001",
+      "score": 0.714286,
+      "passed": false,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "毛刺",
+            "expected": "毛刺",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "无",
+            "expected": "有",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_338",
+            "expected": "obj_338",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_002",
+      "score": 0.714286,
+      "passed": false,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "毛刺",
+            "expected": "毛刺",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "无",
+            "expected": "有",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_449",
+            "expected": "obj_449",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_003",
+      "score": 0.714286,
+      "passed": false,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "毛刺",
+            "expected": "毛刺",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "有",
+            "expected": "无",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_637",
+            "expected": "obj_637",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_004",
+      "score": 0.714286,
+      "passed": false,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "毛刺",
+            "expected": "毛刺",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "有",
+            "expected": "无",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_484",
+            "expected": "obj_484",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_005",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "尺寸",
+            "expected": "尺寸",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "有",
+            "expected": "有",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_212",
+            "expected": "obj_212",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_006",
+      "score": 0.714286,
+      "passed": false,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "裂纹",
+            "expected": "裂纹",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "有",
+            "expected": "无",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_826",
+            "expected": "obj_826",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_007",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "划痕",
+            "expected": "划痕",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "无",
+            "expected": "无",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_163",
+            "expected": "obj_163",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_008",
+      "score": 0.714286,
+      "passed": false,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "变形",
+            "expected": "变形",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "无",
+            "expected": "有",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_341",
+            "expected": "obj_341",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_009",
+      "score": 0.714286,
+      "passed": false,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "毛刺",
+            "expected": "毛刺",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "有",
+            "expected": "无",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_243",
+            "expected": "obj_243",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_010",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "毛刺",
+            "expected": "毛刺",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "无",
+            "expected": "无",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_319",
+            "expected": "obj_319",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_011",
+      "score": 0.714286,
+      "passed": false,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "划痕",
+            "expected": "划痕",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "无",
+            "expected": "有",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_199",
+            "expected": "obj_199",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_012",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "尺寸",
+            "expected": "尺寸",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "有",
+            "expected": "有",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_334",
+            "expected": "obj_334",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_质检_013",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "质检",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 3,
+        "n_must": 3,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "质检",
+            "expected": "质检",
+            "correct": true,
+            "weight": 1.0
+          },
+          "check_type": {
+            "predicted": "尺寸",
+            "expected": "尺寸",
+            "correct": true,
+            "weight": 1.0
+          },
+          "expected_answer": {
+            "predicted": "有",
+            "expected": "有",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_182",
+            "expected": "obj_182",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_001",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "搬运",
+            "expected": "搬运",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": "左二",
+            "expected": "左二",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_858",
+            "expected": "obj_858",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_002",
+      "score": 0.0,
+      "passed": false,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 0,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "搬运",
+            "correct": false,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": null,
+            "expected": "右一",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": null,
+            "expected": "obj_413",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_003",
+      "score": 0.0,
+      "passed": false,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 0,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "搬运",
+            "correct": false,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": null,
+            "expected": "左一",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": null,
+            "expected": "obj_818",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_004",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "搬运",
+            "expected": "搬运",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": "C区",
+            "expected": "C区",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_487",
+            "expected": "obj_487",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_005",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "搬运",
+            "expected": "搬运",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": "NG区",
+            "expected": "NG区",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_223",
+            "expected": "obj_223",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_006",
+      "score": 0.0,
+      "passed": false,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 0,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "搬运",
+            "correct": false,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": null,
+            "expected": "工位3",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": null,
+            "expected": "obj_443",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_007",
+      "score": 0.0,
+      "passed": false,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 0,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "搬运",
+            "correct": false,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": null,
+            "expected": "NG区",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": null,
+            "expected": "obj_867",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_008",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "搬运",
+            "expected": "搬运",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": "打磨台",
+            "expected": "打磨台",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_707",
+            "expected": "obj_707",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_009",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "搬运",
+            "expected": "搬运",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": "工位2",
+            "expected": "工位2",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_695",
+            "expected": "obj_695",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_010",
+      "score": 0.0,
+      "passed": false,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 0,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "取料_放置",
+            "expected": "搬运",
+            "correct": false,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": null,
+            "expected": "工位2",
+            "correct": false,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": null,
+            "expected": "obj_418",
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_011",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "搬运",
+            "expected": "搬运",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": "左一",
+            "expected": "左一",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_954",
+            "expected": "obj_954",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_012",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "搬运",
+            "expected": "搬运",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": "打磨台",
+            "expected": "打磨台",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_869",
+            "expected": "obj_869",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_搬运_013",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "搬运",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "搬运",
+            "expected": "搬运",
+            "correct": true,
+            "weight": 1.0
+          },
+          "target_location": {
+            "predicted": "工位4",
+            "expected": "工位4",
+            "correct": true,
+            "weight": 1.0
+          },
+          "object": {
+            "predicted": "obj_670",
+            "expected": "obj_670",
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_001",
+      "score": 0.4,
+      "passed": false,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "高",
+            "correct": false,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 1000,
+            "expected": 500,
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_002",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "紧急",
+            "correct": true,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 200,
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_003",
+      "score": 0.4,
+      "passed": false,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "高",
+            "correct": false,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 800,
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_004",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "高",
+            "correct": false,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 500,
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_005",
+      "score": 0.6,
+      "passed": false,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "高",
+            "correct": false,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 500,
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_006",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "紧急",
+            "correct": true,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 500,
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_007",
+      "score": 0.4,
+      "passed": false,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "高",
+            "correct": false,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 1000,
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_008",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "紧急",
+            "correct": true,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 500,
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_009",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "紧急",
+            "correct": true,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 500,
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_010",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "紧急",
+            "correct": true,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 500,
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_011",
+      "score": 0.4,
+      "passed": false,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "高",
+            "correct": false,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 1000,
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_012",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 1,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "紧急",
+            "correct": true,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 500,
+            "correct": true,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_异常应对_013",
+      "score": 0.8,
+      "passed": false,
+      "task_type": "异常应对",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 1,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "异常应对",
+            "correct": true,
+            "weight": 1.0
+          },
+          "urgency": {
+            "predicted": "紧急",
+            "expected": "紧急",
+            "correct": true,
+            "weight": 1.0
+          },
+          "response_window_ms": {
+            "predicted": 500,
+            "expected": 200,
+            "correct": false,
+            "weight": 0.5
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_001",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "剩余数量",
+            "expected": "剩余数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_002",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "剩余数量",
+            "expected": "剩余数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_003",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "完成数量",
+            "expected": "完成数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_004",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "剩余数量",
+            "expected": "剩余数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_005",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "完成数量",
+            "expected": "完成数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_006",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "完成数量",
+            "expected": "完成数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_007",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "剩余数量",
+            "expected": "剩余数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_008",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "完成数量",
+            "expected": "完成数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_009",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "剩余数量",
+            "expected": "剩余数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_010",
+      "score": 0.5,
+      "passed": false,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "总产量",
+            "expected": "完成数量",
+            "correct": false,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_011",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "完成数量",
+            "expected": "完成数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_012",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "剩余数量",
+            "expected": "剩余数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_状态查询_013",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "状态查询",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "状态查询",
+            "expected": "状态查询",
+            "correct": true,
+            "weight": 1.0
+          },
+          "query": {
+            "predicted": "剩余数量",
+            "expected": "剩余数量",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_001",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "人工确认",
+            "expected": "人工确认",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_002",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "传感器触发",
+            "expected": "传感器触发",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_003",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "3秒后自动",
+            "expected": "3秒后自动",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_004",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "人工确认",
+            "expected": "人工确认",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_005",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "上位机指令",
+            "expected": "上位机指令",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_006",
+      "score": 0.0,
+      "passed": false,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 0,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "异常应对",
+            "expected": "协作等待",
+            "correct": false,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": null,
+            "expected": "3秒后自动",
+            "correct": false,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_007",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "3秒后自动",
+            "expected": "3秒后自动",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_008",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "上位机指令",
+            "expected": "上位机指令",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_009",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "上位机指令",
+            "expected": "上位机指令",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_010",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "3秒后自动",
+            "expected": "3秒后自动",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_011",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "3秒后自动",
+            "expected": "3秒后自动",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_012",
+      "score": 0.5,
+      "passed": false,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 1,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "人工确认",
+            "expected": "传感器触发",
+            "correct": false,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "test_协作等待_013",
+      "score": 1.0,
+      "passed": true,
+      "task_type": "协作等待",
+      "parsed_ok": true,
+      "match_details": {
+        "must_correct": 2,
+        "n_must": 2,
+        "opt_correct": 0,
+        "n_opt": 0,
+        "must_weight": 1.0,
+        "optional_weight": 0.5,
+        "field_results": {
+          "action": {
+            "predicted": "协作等待",
+            "expected": "协作等待",
+            "correct": true,
+            "weight": 1.0
+          },
+          "resume_condition": {
+            "predicted": "人工确认",
+            "expected": "人工确认",
+            "correct": true,
+            "weight": 1.0
+          }
+        }
+      },
+      "error": null
+    }
+  ],
+  "per_task_type": {
+    "取料_放置": {
+      "count": 13,
+      "avg": 0.8692,
+      "passed": false
+    },
+    "装配": {
+      "count": 13,
+      "avg": 0.8308,
+      "passed": false
+    },
+    "换线": {
+      "count": 13,
+      "avg": 0.7231,
+      "passed": false
+    },
+    "质检": {
+      "count": 13,
+      "avg": 0.8242,
+      "passed": false
+    },
+    "搬运": {
+      "count": 13,
+      "avg": 0.6154,
+      "passed": false
+    },
+    "异常应对": {
+      "count": 13,
+      "avg": 0.7231,
+      "passed": false
+    },
+    "状态查询": {
+      "count": 13,
+      "avg": 0.9615,
+      "passed": true
+    },
+    "协作等待": {
+      "count": 13,
+      "avg": 0.8846,
+      "passed": true
+    }
+  },
+  "errors": [
+    {
+      "id": "test_取料_放置_001",
+      "score": 0.9,
+      "task_type": "取料_放置",
+      "expected": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "银色"
+        },
+        "source": "obj_315",
+        "target": {
+          "container": "box_510"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      },
+      "predicted": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "银色",
+          "type": "轴承"
+        },
+        "source": "obj_315",
+        "target": {
+          "container": "box_510"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      }
+    },
+    {
+      "id": "test_取料_放置_002",
+      "score": 0.9,
+      "task_type": "取料_放置",
+      "expected": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "黑色",
+          "head": "内六角"
+        },
+        "source": "obj_682",
+        "target": {
+          "container": "box_839"
+        },
+        "force": "重",
+        "urgency": "常规"
+      },
+      "predicted": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "黑色",
+          "head": "内六角"
+        },
+        "source": "obj_682",
+        "target": {
+          "container": "box_839"
+        },
+        "force": "轻",
+        "urgency": "紧急"
+      }
+    },
+    {
+      "id": "test_取料_放置_003",
+      "score": 0.9,
+      "task_type": "取料_放置",
+      "expected": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "金色"
+        },
+        "source": "obj_622",
+        "target": {
+          "container": "box_941"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      },
+      "predicted": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "金色",
+          "type": "螺母"
+        },
+        "source": "obj_622",
+        "target": {
+          "container": "box_941"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      }
+    },
+    {
+      "id": "test_取料_放置_004",
+      "score": 0.8,
+      "task_type": "取料_放置",
+      "expected": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "绿色"
+        },
+        "source": "obj_706",
+        "target": {
+          "container": "box_296"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      },
+      "predicted": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "绿色",
+          "type": "电路板"
+        },
+        "source": "托盘",
+        "target": {
+          "container": "box_296"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      }
+    },
+    {
+      "id": "test_取料_放置_005",
+      "score": 0.7,
+      "task_type": "取料_放置",
+      "expected": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "银色"
+        },
+        "source": "obj_610",
+        "target": {
+          "container": "box_190"
+        },
+        "force": "中",
+        "urgency": "常规"
+      },
+      "predicted": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "银色",
+          "type": "螺母"
+        },
+        "source": "托盘",
+        "target": {
+          "container": "box_190"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      }
+    },
+    {
+      "id": "test_取料_放置_006",
+      "score": 0.8,
+      "task_type": "取料_放置",
+      "expected": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "黑色"
+        },
+        "source": "obj_456",
+        "target": {
+          "container": "box_798"
+        },
+        "force": "重",
+        "urgency": "常规"
+      },
+      "predicted": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "黑色",
+          "type": "轴承"
+        },
+        "source": "obj_456",
+        "target": {
+          "container": "box_798"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      }
+    },
+    {
+      "id": "test_取料_放置_007",
+      "score": 0.8,
+      "task_type": "取料_放置",
+      "expected": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "金色"
+        },
+        "source": "obj_471",
+        "target": {
+          "container": "box_415"
+        },
+        "force": "重",
+        "urgency": "常规"
+      },
+      "predicted": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "金色",
+          "type": "螺母"
+        },
+        "source": "obj_471",
+        "target": {
+          "container": "box_415"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      }
+    },
+    {
+      "id": "test_取料_放置_009",
+      "score": 0.9,
+      "task_type": "取料_放置",
+      "expected": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "黑色"
+        },
+        "source": "obj_206",
+        "target": {
+          "container": "box_707"
+        },
+        "force": "重",
+        "urgency": "常规"
+      },
+      "predicted": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "黑色"
+        },
+        "source": "obj_206",
+        "target": {
+          "container": "box_707"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      }
+    },
+    {
+      "id": "test_取料_放置_010",
+      "score": 0.8,
+      "task_type": "取料_放置",
+      "expected": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "金色"
+        },
+        "source": "obj_883",
+        "target": {
+          "container": "box_845"
+        },
+        "force": "中",
+        "urgency": "常规"
+      },
+      "predicted": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "金色",
+          "type": "螺母"
+        },
+        "source": "obj_883",
+        "target": {
+          "container": "box_845"
+        },
+        "force": "轻",
+        "urgency": "紧急"
+      }
+    },
+    {
+      "id": "test_取料_放置_011",
+      "score": 0.9,
+      "task_type": "取料_放置",
+      "expected": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "绿色"
+        },
+        "source": "obj_904",
+        "target": {
+          "container": "box_320"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      },
+      "predicted": {
+        "action": "取料_放置",
+        "object_filter": {
+          "color": "绿色",
+          "type": "电路板"
+        },
+        "source": "obj_904",
+        "target": {
+          "container": "box_320"
+        },
+        "force": "轻",
+        "urgency": "常规"
+      }
+    }
+  ],
+  "format_pass_rate": 1.0,
+  "passed": false,
+  "metadata": {
+    "pass_threshold": 0.88,
+    "match_type": "weighted_field",
+    "timestamp": "2026-06-13T18:07:15.669663"
+  }
+}

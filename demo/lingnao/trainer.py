@@ -73,7 +73,6 @@ def render_sample(sample: Dict) -> str:
     # 🖼️ 图像占位符：当训练数据包含图像时，需在 user_text 前插入 <|vision_start|><|image_pad|><|vision_end|>
     # 并在 preprocess 阶段将图像张量传给 processor。目前训练为纯文本模式。
     user_text = (
-        f"世界状态: {json.dumps(sample['world_state'], ensure_ascii=False)}\n\n"
         f"工人说: {sample['worker_utterance']}\n\n"
         f"请输出 JSON:"
     )

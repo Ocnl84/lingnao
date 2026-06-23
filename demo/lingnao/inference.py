@@ -22,10 +22,10 @@ from peft import PeftModel
 
 try:
     from .config import MODEL_PATH, SYSTEM_PROMPT, TEST_FILE, OUTPUT_DIR
-    from .evaluator import safe_parse_json
+    from .eval import safe_parse_json
 except ImportError:
     from config import MODEL_PATH, SYSTEM_PROMPT, TEST_FILE, OUTPUT_DIR
-    from evaluator import safe_parse_json
+    from eval import safe_parse_json
 
 
 def load_model_with_lora(
@@ -85,7 +85,6 @@ def predict_single(
         {"id": ..., "raw_output": ..., "parsed": ...}
     """
     user_text = (
-        f"世界状态: {json.dumps(sample.get('world_state', {}), ensure_ascii=False)}\n\n"
         f"工人说: {sample.get('worker_utterance', '')}\n\n"
         f"请输出 JSON:"
     )
@@ -164,7 +163,6 @@ def predict_batch(
 
         for j, sample in enumerate(batch):
             user_text = (
-                f"世界状态: {json.dumps(sample.get('world_state', {}), ensure_ascii=False)}\n\n"
                 f"工人说: {sample.get('worker_utterance', '')}\n\n请输出 JSON:"
             )
 

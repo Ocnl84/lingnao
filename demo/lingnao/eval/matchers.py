@@ -8,7 +8,7 @@
 
 from abc import ABC, abstractmethod
 from typing import Dict, List, Optional, Any, ClassVar
-from .eval_types import MatchResult, EvalConfig
+from .types import MatchResult, EvalConfig
 
 
 # ═══════════════════════════════════════════════════════════
@@ -31,7 +31,7 @@ def _get_nested(obj: Dict, path: str) -> Any:
 
 def _flatten_fields(obj: Dict, prefix: str = "") -> Dict[str, Any]:
     """将嵌套 dict 展开为点号路径的扁平字典。"""
-    from .eval_types import flatten_fields
+    from .types import flatten_fields
     return flatten_fields(obj, prefix)
 
 
@@ -346,5 +346,5 @@ class ModelGradedMatcher(BaseMatcher):
         """占位实现 — 实际使用需从 eval_model_graded 导入完整版。"""
         raise NotImplementedError(
             "ModelGradedMatcher 需要从 eval_model_graded 导入完整实现。"
-            "请使用: from lingnao.eval_model_graded import ModelGradedMatcher"
+            "请使用: from lingnao.eval.model_graded import ModelGradedMatcher"
         )

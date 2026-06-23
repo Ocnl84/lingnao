@@ -5,11 +5,10 @@
 ====================================================================
 
 WAM 架构第一层完整演示：
-  数据生成 → 基线测试 → 微调训练 → 推理评测 → 结果报告
+  数据集加载 → 基线测试 → 微调训练 → 推理评测 → 结果报告
 
 用法:
-  python run_demo.py                     # 读取已有数据集，跑推理+训练
-  python run_demo.py --gen-data          # 先生成数据集再跑
+  python run_demo.py                     # 读取 PRJ 数据集，跑推理+训练
   python run_demo.py --skip-train        # 跳过训练，只用基线
   python run_demo.py --interactive       # 交互模式
 
@@ -32,8 +31,7 @@ from lingnao.config import (
     OUTPUT_DIR, TRAIN_FILE, TEST_FILE,
     VALID_ACTIONS, PASS_THRESHOLD, MODEL_PATH,
 )
-from lingnao.data_generator import generate_dataset
-from lingnao.evaluator import score_sample, evaluate_dataset, print_report
+from lingnao.eval import score_sample, evaluate_dataset, print_report
 
 
 # ═══════════════════════════════════════════════════════════
@@ -58,72 +56,39 @@ def load_jsonl(path: str) -> list:
     return samples
 
 
-def load_or_generate(train_file: str, test_file: str, gen_data: bool):
+def load_datasets(train_file: str, test_file: str):
     """
-    加载已有数据集，或重新生成。
+    加载 PRJ 数据集。
 
     Args:
         train_file: 训练集路径
         test_file: 测试集路径
-        gen_data: 是否强制重新生成
 
     Returns:
         (train_samples, test_samples)
     """
-    if gen_data:
-        step_header("Step 1/5: 生成工业指令数据集")
-        train_samples = generate_dataset(
-            n_per_task=56, output_path=train_file, id_prefix="train", seed=42
-        )
-        train_utts = set(s["worker_utterance"] for s in train_samples)
-        test_samples = generate_dataset(
-            n_per_task=13, output_path=test_file, id_prefix="test", seed=1041,
-            exclude_utterances=train_utts,
-        )
-        return train_samples, test_samples
+    step_header("Step 1/5: 加载数据集")
 
-    # ── 默认：读取已有数据集 ──
-    step_header("Step 1/5: 加载已有数据集")
+    if not os.path.exists(train_file):
+        sys.exit(f"❌ 训练集不存在: {train_file}")
+    if not os.path.exists(test_file):
+        sys.exit(f"❌ 测试集不存在: {test_file}")
 
-    regenerated = False
+    train_samples = load_jsonl(train_file)
+    print(f"  📂 训练集: {os.path.basename(train_file)} → {len(train_samples)} 条")
 
-    # 训练集
-    if os.path.exists(train_file):
-        train_samples = load_jsonl(train_file)
-        print(f"  📂 训练集: {train_file} → {len(train_samples)} 条")
-    else:
-        print(f"  ⚠️  训练集不存在 ({train_file})，自动生成...")
-        train_samples = generate_dataset(
-            n_per_task=56, output_path=train_file, id_prefix="train", seed=42
-        )
-        regenerated = True
-
-    # 测试集
-    if os.path.exists(test_file):
-        test_samples = load_jsonl(test_file)
-        print(f"  📂 测试集: {test_file} → {len(test_samples)} 条")
-    else:
-        print(f"  ⚠️  测试集不存在 ({test_file})，自动生成...")
-        train_utts = set(s["worker_utterance"] for s in train_samples)
-        test_samples = generate_dataset(
-            n_per_task=13, output_path=test_file, id_prefix="test", seed=1041,
-            exclude_utterances=train_utts,
-        )
-        regenerated = True
-
-    if regenerated:
-        print(f"  📁 训练集: {train_file}")
-        print(f"  📁 测试集: {test_file}")
+    test_samples = load_jsonl(test_file)
+    print(f"  📂 测试集: {os.path.basename(test_file)} → {len(test_samples)} 条")
 
     return train_samples, test_samples
 
 
-def run_full_demo(skip_train: bool = True, gen_data: bool = True):
+def run_full_demo(skip_train: bool = True):
     """
     运行完整 Demo 流程。
 
     流程:
-      Step 1: 加载/生成数据集
+      Step 1: 加载 PRJ 数据集
       Step 2: 基线测试（基座模型，无 LoRA）
       Step 3: QLoRA 微调训练
       Step 4: 微调后推理 + 评测
@@ -131,7 +96,6 @@ def run_full_demo(skip_train: bool = True, gen_data: bool = True):
 
     Args:
         skip_train: 跳过训练步骤
-        gen_data: 强制重新生成数据集（默认 False，直接读取已有文件）
     """
     results = {
         "timestamp": datetime.now().isoformat(),
@@ -142,9 +106,9 @@ def run_full_demo(skip_train: bool = True, gen_data: bool = True):
     # ════════════════════════════════════════════════════════
     # Step 1: 加载/生成数据集
     # ════════════════════════════════════════════════════════
-    train_samples, test_samples = load_or_generate(TRAIN_FILE, TEST_FILE, gen_data)
+    train_samples, test_samples = load_datasets(TRAIN_FILE, TEST_FILE)
 
-    results["steps"]["data_gen"] = {
+    results["steps"]["data_load"] = {
         "train_count": len(train_samples),
         "test_count": len(test_samples),
     }
@@ -248,7 +212,7 @@ def run_full_demo(skip_train: bool = True, gen_data: bool = True):
   ┌──────────────────────────────────────────────────────┐
   │          PRJ-01 灵脑 — Demo 验证报告                 │
   ├──────────────────────────────────────────────────────┤
-  │  数据集:       训练 {results['steps']['data_gen']['train_count']} 条 / 测试 {results['steps']['data_gen']['test_count']} 条
+  │  数据集:       训练 {results['steps']['data_load']['train_count']} 条 / 测试 {results['steps']['data_load']['test_count']} 条
   │  任务类型:     {len(VALID_ACTIONS)} 种
   │  达标线:       {PASS_THRESHOLD:.0%}
   │                                                      │
@@ -307,14 +271,6 @@ def run_interactive():
             sample = {
                 "id": f"interactive_{sample_id:03d}",
                 "worker_utterance": utterance,
-                "world_state": {
-                    "objects": [
-                        {"id": "obj_001", "type": "螺丝", "color": "蓝色", "head": "十字", "location": "箱子A"},
-                    ],
-                    "containers": [
-                        {"id": "box_001", "position": "左一", "capacity": 10},
-                    ],
-                },
             }
             result = predict_single(model, processor, sample)
             output = json.dumps(result['parsed'], ensure_ascii=False, indent=2) if result['parsed'] else result['raw_output']
@@ -332,16 +288,12 @@ if __name__ == "__main__":
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 示例:
-  python run_demo.py                     # 读取已有数据集，跑推理+训练
-  python run_demo.py --gen-data          # 先生成数据集再跑
+  python run_demo.py                     # 读取 PRJ 数据集，跑推理+训练
   python run_demo.py --skip-train        # 只跑基线
-  python run_demo.py --gen-data --skip-train  # 只生成数据
   python run_demo.py --interactive       # 交互模式
         """,
     )
     parser.add_argument("--skip-train", action="store_true", help="跳过训练步骤")
-    parser.add_argument("--gen-data", action="store_true",
-                        help="重新生成数据集（默认直接读取 data/ 下已有文件）")
     parser.add_argument("--interactive", action="store_true", help="交互模式")
     args = parser.parse_args()
 
@@ -357,4 +309,4 @@ if __name__ == "__main__":
     if args.interactive:
         run_interactive()
     else:
-        run_full_demo(skip_train=args.skip_train, gen_data=args.gen_data)
+        run_full_demo(skip_train=args.skip_train)

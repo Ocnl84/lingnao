@@ -15,8 +15,8 @@ import json
 import re
 from typing import Dict, List, Optional, Any, Callable
 
-from .eval_types import MatchResult, EvalConfig, ModelGradedConfig
-from .eval_matchers import BaseMatcher
+from .types import MatchResult, EvalConfig, ModelGradedConfig
+from .matchers import BaseMatcher
 
 
 # ═══════════════════════════════════════════════════════════
@@ -222,8 +222,8 @@ def create_qwen3vl_model_fn(
     if _dir not in sys.path:
         sys.path.insert(0, os.path.dirname(_dir))
 
-    from .inference import load_model_with_lora
-    from .config import MODEL_PATH as DEFAULT_MODEL_PATH
+    from ..inference import load_model_with_lora
+    from ..config import MODEL_PATH as DEFAULT_MODEL_PATH
 
     model_path = base_path or DEFAULT_MODEL_PATH
 
@@ -266,13 +266,13 @@ def create_qwen3vl_model_fn(
 
 def _update_matcher_registry():
     """
-    将 eval_matchers.BaseMatcher 工厂注册表中的占位 ModelGradedMatcher
+    将 matchers.BaseMatcher 工厂注册表中的占位 ModelGradedMatcher
     替换为真实实现。在模块首次导入时自动调用。
     """
-    from . import eval_matchers
+    from . import matchers as _matchers
 
     # 替换模块中的占位类
-    eval_matchers.ModelGradedMatcher = ModelGradedMatcher
+    _matchers.ModelGradedMatcher = ModelGradedMatcher
 
     # 更新 BaseMatcher.from_config 的注册表（懒加载时动态查找）
     # 因为 registry 是方法内的局部变量，我们直接更新 matchers 模块的符号即可

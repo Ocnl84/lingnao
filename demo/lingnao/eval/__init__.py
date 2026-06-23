@@ -15,14 +15,14 @@ import re
 from datetime import datetime
 from typing import Dict, List, Tuple, Optional, Any, Union
 
-from .eval_types import (
+from .types import (
     EvalConfig, MatchResult, SampleResult, EvalResult, ModelGradedConfig, flatten_fields,
 )
-from .eval_matchers import (
+from .matchers import (
     BaseMatcher, WeightedFieldMatcher,
     JsonIncludesMatcher, JsonFuzzyMatcher, ExactMatchMatcher,
 )
-from .eval_metrics import (
+from .metrics import (
     compute_accuracy, compute_bootstrap_std, compute_macro_f1, compute_f1_score,
 )
 
@@ -93,7 +93,7 @@ class Eval:
 
     Usage:
         # 从 YAML 加载
-        evaluator = Eval.from_yaml("eval_config.yaml", task_type="取料_放置")
+        evaluator = Eval.from_yaml("eval_config.yaml", task_type="取料放置")
         result = evaluator.run(predictions, ground_truth)
 
         # 手动配置
@@ -320,7 +320,7 @@ def _instantiate_matcher(config: EvalConfig) -> BaseMatcher:
     # 对于 model_graded，尝试导入真实实现
     if config.match_type == "model_graded":
         try:
-            from .eval_model_graded import ModelGradedMatcher as RealModelGradedMatcher
+            from .model_graded import ModelGradedMatcher as RealModelGradedMatcher
             mg = config.model_graded or ModelGradedConfig()
             return RealModelGradedMatcher(
                 choice_strings=mg.choice_strings,
@@ -441,7 +441,7 @@ def print_report(result: Union[Dict, EvalResult], save_json: bool = False):
 
     # 可选：保存 JSON 报告
     if save_json:
-        from .config import OUTPUT_DIR
+        from ..config import OUTPUT_DIR
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         report_path = os.path.join(OUTPUT_DIR, f"eval_report_{timestamp}.json")
         os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -514,12 +514,12 @@ def evaluate_dataset(
 # E 区：CLI（增强版）
 # ═══════════════════════════════════════════════════════════
 
-if __name__ == "__main__":
+def main():
+    """CLI 入口：python -m lingnao.eval --preds <file> [options]"""
     import argparse
     import sys
 
-    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    from config import TEST_FILE, EVAL_CONFIG_YAML
+    from ..config import TEST_FILE, EVAL_CONFIG_YAML
 
     parser = argparse.ArgumentParser(description="PRJ-01 灵脑 — 评测（OpenAI Evals 标准）")
     parser.add_argument("--preds", required=True, help="模型预测文件 (JSONL)")
@@ -572,3 +572,7 @@ if __name__ == "__main__":
 
     # 返回 exit code
     sys.exit(0 if result.passed else 1)
+
+
+if __name__ == "__main__":
+    main()
